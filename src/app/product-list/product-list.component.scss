@@ -1,0 +1,80 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.main-container_product-list {
+  max-width: 1340px;
+  margin: 0 auto;
+  .product-container {
+    width: 320px / 1340px *100%;
+    overflow: hidden;
+    float: left;
+    margin-left: 20px/1340px * 100%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    //img {
+    //  width: 100%;
+    //}
+    .product-container_img {
+      height: 200px;
+      //background-size: cover;
+      overflow: hidden;
+    }
+
+   /* .product_img__clothes {
+      //background-image: url(../../assets/img/product-list/clothes.jpg);
+    }
+    .product_img__clothing-shop {
+      //background-image: url(../../assets/img/product-list/clothing-shop.jpg);
+    }
+    .product_img__laptop2{
+      //background-image: url(../../assets/img/product-list/laptop2.jpg);
+    }
+    .product_img__laptop {
+      //background-image: url(../../assets/img/product-list/laptop.jpg);
+    }*/
+
+    .product-container_description {
+      height: 50px;
+      background-color: $main-color;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      padding: 0 15px;
+      .product_see {
+        cursor: pointer;
+      }
+    }
+    //display: flex;
+    //justify-content: space-around;
+  }
+  .product-container:first-child {
+    margin-left: 0;
+  }
+}
+.main-container_product-list::after {
+  content: '';
+}
+.scroll-top {
+  width: 80px;
+  height: 80px;
+  @include border-radius(40px);
+  border: none;
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  outline: none;
+  color: $main-color;
+  background-color: #eee;
+  opacity: 0.8;
+}
+.scroll-top:active {
+  border: 2px solid $main-color;
+}
+
+.app-footer {
+  float: left;
+  width: 100%;
+}
